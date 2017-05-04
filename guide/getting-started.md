@@ -116,7 +116,31 @@ Start it, and it should display on the console, every message sent in the guild 
 
 {% sample lang="java" %}
 
-At first, we create a class that extends Bot :
+At first, we create a class that implements Bot :
+
+```java
+public class MyBot implements IBot
+{
+    @Override
+    public void init()
+    {
+        System.out.println("I am initializing");
+    }
+}
+```
+
+You need then, to start your bot, to ask Krobot to start it, like this :
+
+```java
+public static void main(String[] args) throws LoginException, InterruptedException, RateLimitedException
+{
+    Krobot.start("Your bot token", MyBot.class);
+}
+```
+
+Obviously, replace "Your bot token" with the bot token you had before.
+
+You can now launch your bot, you should see a lot of logs, and your "I am initializing" in the middle of them.
 
 {% endmethod %}
 
