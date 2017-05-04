@@ -8,7 +8,7 @@
 
 * [1. Getting Started](guide/getting-started.md)
 
-## Core framework \(Java\)
+## Framework
 
 ## Command engine
 

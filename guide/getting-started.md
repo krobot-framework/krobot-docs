@@ -27,13 +27,13 @@ You should have a basic project then.
 
 To use Krobot, you can use either Maven, or Gradle. In this guide i will use Gradle, but do what you prefer.
 
-Let's create a simple project.
+Let's create a simple project.  **Don't forget to add the Krobot maven repository, and JCenter**.
 
 ```bash
-$ gradle init
+gradle init
 ```
 
-You should then add Krobot as dependency. It will automatically includes its dependencies like JDA. **Don't forget to add the Krobot maven repository, and JCenter**.
+**Don't forget to add the Krobot maven repository, and JCenter**.
 
 ```groovy
 apply plugin: 'java'
