@@ -6,7 +6,7 @@
 
 ## Guide
 
-* [Getting started](guide/getting-started.md)
+* [1. Getting Started](guide/getting-started.md)
 
 ## Core framework \(Java\)
 
