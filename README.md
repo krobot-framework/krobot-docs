@@ -17,6 +17,8 @@ Here is a simple preview on the right. Don't forget to click on the languages bu
 {% sample lang="js" %}
 
 ```js
+const { CommandManager } = require('krobotjs');
+
 commands.group().prefix('!').apply(_ => {
   commands
     .command('test <message> <nb:^[0-9]+$> [opt]', (message, args) => message.reply(`Test : (${args.get('nb')}`)).register()
@@ -29,6 +31,9 @@ commands.group().prefix('!').apply(_ => {
 {% sample lang="java" %}
 
 ```java
+@Inject
+private CommandManager commands;
+
 commands.group().prefix("!").apply(() -> {
   commands
     .command("test <message> <nb:number> [opt]", (context, args) -> context.sendMessage("Test : ", args.get('nb'))).register()
