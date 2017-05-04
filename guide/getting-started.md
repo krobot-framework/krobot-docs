@@ -16,14 +16,25 @@ You can use any editor/IDE then to open your project.
 
 {% sample lang="js" %}
 
-Using NPM/Yarn, initialize a simple project, and then, add "[krobotjs](https://www.npmjs.com/package/krobotjs "Krobot NPM package")" as dependency.
+Let's create a simple project : Using NPM/Yarn, initialize a new project.
 
 ```bash
 $ npm init
+```
+
+Then, add "[krobotjs](https://www.npmjs.com/package/krobotjs "Krobot NPM package")" as dependency.
+
+```bash
 $ npm install krobotjs
 ```
 
-You should have a basic project then.
+You should probably create a start script and a src/ folder then :
+
+```json
+"scripts": {
+    "start": "node src/index.js"
+}
+```
 
 {% sample lang="java" %}
 
@@ -60,6 +71,16 @@ The bot token is the key to your app, so don't publish it anyway !
 ## Initializing the bot
 
 Then, we're going to initialize the bot itself.
+
+We will create the bot and login it using the bot token. Again, I repeat, don't publish your bot token !
+
+{% sample lang="js" %}
+
+We will start by creating a Discord JS client :
+
+{% sample lang="java" %}
+
+At first, we create a class that extends Bot :
 
 {% endmethod %}
 
