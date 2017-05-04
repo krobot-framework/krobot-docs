@@ -12,6 +12,8 @@ You can start from [the main guide](/guide/getting-started.md "Guide beggining")
 
 ### Preview
 
+Here is a simple preview on the right. Don't forget to click on the languages buttons on the top-right corner of the window to swap the code language between Java/JavaScript.
+
 {% sample lang="js" %}
 
 ```js
