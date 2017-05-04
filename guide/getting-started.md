@@ -12,6 +12,8 @@ First, we will set up a basic project. At first, you should know that there is t
  
 In both case we will use a package manager, download the libraries manually would be too long and complicated.
 
+You can use any editor/IDE then to open your project.
+
 {% sample lang="js" %}
 
 Using NPM/Yarn, initialize a simple project, and then, add "[krobotjs](https://www.npmjs.com/package/krobotjs "Krobot NPM package")" as dependency.
@@ -30,20 +32,12 @@ To use Krobot, you can use either Maven, or Gradle. In this guide i will use Gra
 Let's create a simple project.  **Don't forget to add the Krobot maven repository, and JCenter**.
 
 ```bash
-gradle init
+$ gradle init
 ```
-
-**Don't forget to add the Krobot maven repository, and JCenter**.
-
 ```groovy
-apply plugin: 'java'
-
 repositories {
-  jcenter()
-  
-  maven {
-    url 'http://krobot-framework.github.io/maven/'
-  }
+  jcenter()  
+  maven { url 'http://krobot-framework.github.io/maven/' }
 }
 
 dependencies {
