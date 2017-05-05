@@ -33,15 +33,13 @@ private CommandManager commands;
 
 ## Command paths
 
-Let's talk about the command path syntax. It's the king of things that looks like that :
+Let's talk about the command path syntax. It's the kind of things that looks like that :
 
 ```
 !command <required> [optional]
 ```
 
 What does this mean ? It is a way to describe the command and its arguments, including their type and if they are required.
-
-{% method %}
 
 ### Syntax
 
@@ -59,6 +57,8 @@ Then, add its args. Each required arg must be surrounded by **"< >"** and option
 ```
 
 This is the path of a simple command " !hello ", with a required arg " first\_name ", and an optional arg " last\_name ".
+
+{% method %}
 
 Args are named. You can then retrieve their values using the name you've given to them.
 
@@ -100,7 +100,7 @@ This is the path of a simple command " !hello ", with a required arg " to " that
 Types can also be put on list :
 
 ```
-!hello <to:users...>
+!hello <to:user...>
 ```
 
 In  this case " to " is a user list.
