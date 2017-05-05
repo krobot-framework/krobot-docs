@@ -12,6 +12,7 @@
 * [4. Dependency injection](guide/dependency-injection.md)
 * [5. Logging](guide/logging.md)
 * [6. Advanced commands](guide/advanced-commands.md)
+* [7. Configs](guide/configs.md)
 
 ## Framework
 
