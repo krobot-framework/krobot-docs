@@ -10,6 +10,7 @@
 * [2. Starting the bot](starting-the-bot.md)
 * [3. Making commands](making-commands.md)
 * [4. Dependency injection](guide/dependency-injection.md)
+* [5. Logging](guide/logging.md)
 * [6. Advanced commands](guide/advanced-commands.md)
 
 ## Framework
