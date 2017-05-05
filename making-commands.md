@@ -147,9 +147,9 @@ commands.command('!hello [message]', (message, args) => {
 commands.make("!hello [message]", (message, args) -> {
     // The action
 }).register();
-``
+```
 
-{% sample lang="common" %}
+{% sample common %}
 
 Here, the anonymous function is the command call action. We registered a command with the path '!hello [message]' that will trigger our function when called.
 
