@@ -31,7 +31,7 @@ commands.command('test <message>', (message, args) =>
 @Inject
 private CommandManager commands;
 
-commands.command("test <message>", (context, args) ->
+commands.make("test <message>", (context, args) ->
   context.sendMessage("Test : {}", args.get("message"))
 ).register();
 ```

@@ -107,4 +107,53 @@ In  this case " to " is a user list.
 
 {% endmethod %}
 
+{% method %}
+
 ## Registering our first command
+
+Let's create our first command. The command will simply say a given message to the caller, or "Hello" by default.
+
+**Example :**
+
+```
+Litarvan : !hello
+Bot      : Hello @Litarvan
+
+Litarvan : !hello Bonjour
+Bot      : Bonjour @Litarvan
+```
+
+So what will the path be ? The "message" argument is optional, the label is !hello, so :
+
+```
+!hello [message]
+```
+
+{% sample lang="common" %}
+
+We ask  the command manager to create a command using our path :
+
+{% sample lang="js" %}
+
+```js
+commands.command('!hello [message]', (message, args) => {
+    // The action
+}).register();
+```
+
+{% sample lang="java" %}
+
+```java
+commands.make("!hello [message]", (message, args) -> {
+    // The action
+}).register();
+``
+
+{% sample lang="common" %}
+
+Here, the anonymous function is the command call action. We registered a command with the path '!hello [message]' that will trigger our function when called.
+
+**Don't forget the .register(); or it will do nohting but return the created command without registering it.**
+
+{% endmethod %}
+
