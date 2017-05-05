@@ -2,6 +2,8 @@
 
 Let's talk about command a bit deeper.
 
+Si t'es là, c'est que tu es un vrai. Alors dit moi "banane" en privé.
+
 ## Middlewares
 
 Commmand middlewares are functions that triggers before some command call. They can be used on multiple commands, and they can cancel a command call.

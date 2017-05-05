@@ -6,7 +6,13 @@ The Krobot framework is a modern Discord bot framework based on **discord.js** \
 
 **This is the java version book.**
 
-The main part of the framework is the engine is the command system, but it has a complete config engine, dependency injection, and more.
+The framework contains :
+
+* A complete command engine, with middlewares, arguments parsing, and sub commands
+* A simple config engine from the "turfu"
+* Dependency injection
+* Logging
+* Util classes/functions
 
 You can start from [the main guide](/guide/getting-started.md "Guide beggining") or just keep the book with you when developing.
 
@@ -25,11 +31,11 @@ commands.group().prefix(config.at("app.command.prefix")).apply(() -> {
   commands.make("test <message>", (context, args) ->
     context.sendMessage("Test : {}", args.get("message"));
   ).middlewares(TestMiddleware.class).register();
-  
+
   commands.make("test2 <amount:number> [targets:users...]", TestCommand.class).register();
   ...
 });
 ```
 
-
+--&gt;
 
