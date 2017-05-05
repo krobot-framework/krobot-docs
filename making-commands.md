@@ -129,7 +129,7 @@ So what will the path be ? The "message" argument is optional, the label is !hel
 !hello [message]
 ```
 
-{% sample lang="common" %}
+{% sample common %}
 
 We ask  the command manager to create a command using our path :
 
