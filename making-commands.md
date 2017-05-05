@@ -1,8 +1,8 @@
 # Making commands
 
-So, let's create our first command.
-
 {% method %}
+
+So, let's create our first command.
 
 The object that manages the commands is the **CommandManager**. Command are registered to it, and it will parse the messages to check for command call, then call them.
 
