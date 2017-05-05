@@ -153,7 +153,7 @@ commands.make("!hello [message]", (context, args) -> {
 
 {% common %}
 
-Here, the anonymous function is the command call acti`javaon. We registered a command with the path '!hello [message]' that will trigger our function when called.
+Here, the anonymous function is the command call action. We registered a command with the path '!hello [message]' that will trigger our function when called.
 
 **Don't forget the .register(); or it will do nohting but return the created command without registering it.**
 
