@@ -129,6 +129,8 @@ So what will the path be ? The "message" argument is optional, the label is !hel
 !hello [message]
 ```
 
+We then ask him then to send the message.
+
 {% common %}
 
 We ask  the command manager to create a command using our path :
@@ -144,16 +146,32 @@ commands.command('!hello [message]', (message, args) => {
 {% sample lang="java" %}
 
 ```java
-commands.make("!hello [message]", (message, args) -> {
+commands.make("!hello [message]", (context, args) -> {
     // The action
 }).register();
 ```
 
 {% common %}
 
-Here, the anonymous function is the command call action. We registered a command with the path '!hello [message]' that will trigger our function when called.
+Here, the anonymous function is the command call acti`javaon. We registered a command with the path '!hello [message]' that will trigger our function when called.
 
 **Don't forget the .register(); or it will do nohting but return the created command without registering it.**
 
-{% endmethod %}
+Then, we send the message :
 
+{% sample lang="java" %}
+
+```java
+context.sendMessage((args.containsKey("message") ? "Hello" : args.get("message").getAsString()) + " " + context.getUser().getAsMention());
+```
+
+{% sample lang="js" %}
+
+```js
+message.reply(`${args.has('message') ? args.get('message') : 'Hello'} ${message.author.mention()}`);
+```
+{% common %}
+
+So this should work, you can launch and then test !
+
+{% endmethod %}
