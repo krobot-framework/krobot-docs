@@ -1,6 +1,6 @@
-# Making commands
-
 {% method %}
+
+# Making commands
 
 So, let's create our first command.
 
