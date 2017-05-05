@@ -107,18 +107,9 @@ In  this case " to " is a user list.
 
 {% endmethod %}
 
-
 ## Registering our first command
-{% method %}
 
 {% method %}
-
-
-
-
-'
-
-
 
 Let's create our first command. The command will simply say a given message to the caller, or "Hello" by default.
 
