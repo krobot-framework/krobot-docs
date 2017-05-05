@@ -23,7 +23,7 @@ We will see later that Krobot always tries to use dependency injection, like for
 
 ## Modules
 
-Guice uses "Modules" to define injection rules like an instance to provide, or a binding from an interface to a class. To provide your own module, you need to give them to the _Krobot\#start_ function in your bot_ \#main_ function like that : 
+Guice uses "Modules" to define injection rules like an instance to provide, or a binding from an interface to a class. To provide your own module, you need to give them to the _Krobot\#start_ function in your bot_ \#main_ function like that :
 
 ```java
 Krobot.start(MyBot.class, new MyCustomModule());
@@ -72,5 +72,5 @@ Here is the singletons that Krobot configured, that you can use in your class ma
 
 Obviously there is a lot of thing you can do with Guice, i just showed you the basics. To see more about Guice, you can look at [its official wiki](https://github.com/google/guice/wiki "Guice official wiki")
 
-
+--&gt;
 

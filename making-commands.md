@@ -2,9 +2,7 @@
 
 So, let's create our first command.
 
-The object that manages the commands is the **CommandManager**. Command are registered to it, and it will parse the messages to check for command call, then call them.
-
-The CommandManager is automatically injected using Dependency Injection, just create an empty field, and put the "@Inject" annotation on it.
+The object that manages the commands is the **CommandManager**. Command are registered to it, and it will parse the messages to check for command call, then call them. The CommandManager is automatically injected using Dependency Injection, just create an empty field, and put the "@Inject" annotation on it :
 
 ```java
 @Inject
@@ -110,4 +108,6 @@ context.sendMessage("{} {}",
 ```
 
 As you see, the String given to sendMessage goes automatically through _String\#format._ So, this should work, you can launch and then test !
+
+--&gt;
 
