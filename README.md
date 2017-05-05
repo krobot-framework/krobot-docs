@@ -18,14 +18,11 @@ Here is a simple preview on the right. Don't forget to click on the languages bu
 
 ```js
 const { CommandManager } = require('krobotjs');
+const commands = new CommandManager();
 
-commands.group().prefix('!').apply(_ => {
-  commands
-    .command('test <message> <nb:^[0-9]+$> [opt]', (message, args) => message.reply(`Test : (${args.get('nb')}`)).register()
-    .sub('example', (message, args) => message.reply('I am !test example')).register();
-  commands
-    .command('test2 <message>', (message, args) => message.reply(`Second test : $message`)).register();
-});
+commands.command('test <message>', (message, args) =>
+  message.reply(`Test : ${args.get('message')}`)
+).register();
 ```
 
 {% sample lang="java" %}
@@ -34,13 +31,9 @@ commands.group().prefix('!').apply(_ => {
 @Inject
 private CommandManager commands;
 
-commands.group().prefix("!").apply(() -> {
-  commands
-    .command("test <message> <nb:number> [opt]", (context, args) -> context.sendMessage("Test : ", args.get('nb'))).register()
-    .sub("example", (context, args) -> context.sendMessage("I am !test example")).register();
-  commands
-    .command("test2 <message>", (context, args) -> context.sendMessage("Second test : {}", args.get("message"))).register();
-});
+commands.command("test <message>", (context, args) ->
+  context.sendMessage("Test : {}", args.get("message"))
+).register();
 ```
 
 {% endmethod %}

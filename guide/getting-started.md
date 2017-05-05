@@ -65,3 +65,5 @@ Before anything, you need to go to [the Discord Developer Console](https://disco
 Click on "New app", then enter a name, put an icon, and add a description. You don't need to fill the Redirect URIs. To then create the bot account, click on **"Create a Bot User"**. Finally, note your "Client ID" at the top, and the most important, the "Token" of the bot user (click on "Token: **click to reveal**" in the bot user section).
 
 The bot token is the key to your app, so don't publish it anyway !
+
+ 
