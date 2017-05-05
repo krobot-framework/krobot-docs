@@ -21,9 +21,14 @@ private CommandManager commands;
 @Inject
 private ConfigProvider config;
 
-commands.make(config.at("bot.prefix") + "test <message>", (context, args) ->
-  context.sendMessage("Test : {}", args.get("message"));
-).middlewares(TestMiddleware.class).register();
+commands.group().prefix(config.at("app.command.prefix")).apply(() -> {
+  commands.make("test <message>", (context, args) ->
+    context.sendMessage("Test : {}", args.get("message"));
+  ).middlewares(TestMiddleware.class).register();
+  
+  commands.make("test2 <amount:number> [targets:users...]", TestCommand.class).register();
+  ...
+});
 ```
 
 
