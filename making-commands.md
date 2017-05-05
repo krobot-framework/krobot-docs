@@ -129,7 +129,7 @@ So what will the path be ? The "message" argument is optional, the label is !hel
 !hello [message]
 ```
 
-{% sample common %}
+{% common %}
 
 We ask  the command manager to create a command using our path :
 
@@ -149,7 +149,7 @@ commands.make("!hello [message]", (message, args) -> {
 }).register();
 ```
 
-{% sample common %}
+{% common %}
 
 Here, the anonymous function is the command call action. We registered a command with the path '!hello [message]' that will trigger our function when called.
 
