@@ -9,7 +9,7 @@ The Krobot framework is a modern Discord bot framework based on **discord.js** \
 The framework contains :
 
 * A complete command engine, with middlewares, arguments parsing, and sub commands
-* A simple config engine from the "turfu"
+* A simple config engine
 * Dependency injection
 * Logging
 * Util classes/functions
