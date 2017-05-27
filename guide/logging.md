@@ -1,12 +1,12 @@
 # Logging
 
-As you probably already saw, Krobot uses a logging engine. What is logging ? It's the art of doing System.out.print, like this :
+As you probably already saw, Krobot uses a logging engine. What is logging ? It's the art of doing `System.out.print`, like this :
 
 ```
 [22:17:10] [DEBUG] [Command] Parsing command call for -> /clear
 ```
 
-Krobot uses Apache Log4J as logging engine. It already has a bundled config for it. **You should always use logging instead of System.out.print.**
+Krobot uses Apache Log4J as logging engine. It already has a bundled config for it. **You should always use logging instead of `System.out.print`.**
 
 ## How to use it
 
@@ -50,4 +50,6 @@ Prints :
 Log functions can take a lot of parameters, like throwable by example, and it support formatting. Log4J is a very complete logging engine, so you can look at [the official documentation](https://logging.apache.org/log4j/2.x/manual/api.html) if you want to go further !
 
 ---
+
+
 

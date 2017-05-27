@@ -1,6 +1,6 @@
 # Configs
 
-Krobot has a powerful and simple configuration engine. The config manager is a singleton, the _ConfigProvider_. To use it, Guice can inject it anywhere :
+Krobot has a powerful and simple configuration engine. The config manager is a singleton, the `ConfigProvider`. To use it, Guice can inject it anywhere :
 
 ```java
 @Inject

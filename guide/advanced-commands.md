@@ -13,13 +13,13 @@ commands.group().prefix("!").apply(() -> {
 });
 ```
 
-In this example, the commands will not be " test ", and " hello ", but " !test ", and " !hello ", because they are registered in a group with the " ! " prefix. Obviously, commands registered outside this group will not have the prefix on them.
+In this example, the commands will not be `test`, and `hello`, but `!test`, and `!hello`, because they are registered in a group with the `!` prefix. Obviously, commands registered outside this group will not have the prefix on them.
 
 ## Middlewares
 
 Command middlewares are functions that triggers before some command call. They can be used on multiple commands, and they can cancel a command call.
 
-The command builder has two functions : middleware and middlewares, in this case, use middleware. We will use the other one later.
+The command builder has two functions : `middleware` and `middlewares`, in this case, use `middleware`. We will use the other one later.
 
 ```java
 commands.make("test", (context, args) ->
@@ -40,11 +40,11 @@ commands.group().prefix("!").middleware((command, context, args) ->
 });
 ```
 
-With this code, everytime " !test " or " !hello " is called, "A command is executed !" should be printed on the console.
+With this code, everytime `!test` or `!hello` is called, "A command is executed !" should be printed on the console.
 
 ## Sub commands
 
-You can create sub commands, and even sub sub commands. What is a sub command ? By example, you have a command " !test ", and you want to create a sub command " debug ", the sub command will be triggered when a user will type " !test debug ".
+You can create sub commands, and even sub sub commands. What is a sub command ? By example, you have a command `!test`, and you want to create a sub command `debug`, the sub command will be triggered when a user will type `!test debug`.
 
 Let's write an example :
 
@@ -72,7 +72,9 @@ Obviously, you can create more complex commands, they also use the path syntax !
 
 * Groups modifiers \(like the prefix or the middlewares\) aren't applied on the sub commands, only on the parent one.
 * Parent command middlewares are called when a sub command is triggered, and they can cancel the call, **in this case, "args" parameter of the middleware is null.**
-* You need to call _register\(\)_ to then call the _sub\(\)_ function, so when dealing with multiple sub commands, put the parent command \_register\(\)\_ result in a Command variable, to then use the sub functions multiple times.
+* You need to call `register()` to then call the `sub()` function, so when dealing with multiple sub commands, put the parent command `register()` result in a Command variable, to then use the sub functions multiple times.
 
 ---
+
+
 

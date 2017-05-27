@@ -13,7 +13,7 @@ The CommandManager is injected by Guice when it creates your bot :
 private CommandManager commands;
 ```
 
-The " _@Inject_ " annotation means that this field should be filled by Guice. Obviously, Guice only fill the fields of the class that it creates. Your bot instance is created by Guice, but you can also manually create classes using it, by accessing the injector instance :
+The `@Inject` annotation means that this field should be filled by Guice. Obviously, Guice only fill the fields of the class that it creates. Your bot instance is created by Guice, but you can also manually create classes using it, by accessing the injector instance :
 
 ```java
 MyClass myClass = Krobot.injector().getInstance(MyClass.class);
@@ -23,7 +23,7 @@ We will see later that Krobot always tries to use dependency injection, like for
 
 ## Modules
 
-Guice uses "Modules" to define injection rules like an instance to provide, or a binding from an interface to a class. To provide your own module, you need to give them to the _Krobot\#start_ function in your bot_ \#main_ function like that :
+Guice uses "Modules" to define injection rules like an instance to provide, or a binding from an interface to a class. To provide your own module, you need to give them to the `Krobot#start` function in your bot_ `#main`_ function like that :
 
 ```java
 Krobot.start(MyBot.class, new MyCustomModule());
@@ -56,7 +56,7 @@ private MyInterface myInterface;
 * _myClass_ -&gt; Will be filled by the instance you configured
 * _myInterface_ -&gt; Will be filled by an instance of _MyInterfaceImpl_
 
-**Note : **When Guice is creating instance, it will do a new instance for every field. To make him use the same instance after creating one, you can either use _bind\(...\).toInstance_, or just put the _@Singleton_ annotation on the class.
+**Note : **When Guice is creating instance, it will do a new instance for every field. To make him use the same instance after creating one, you can either use `bind(...).toInstance`, or just put the `@Singleton` annotation on the class.
 
 ## Krobot singletons
 
@@ -66,11 +66,13 @@ Here is the singletons that Krobot configured, that you can use in your class ma
 * The CommandManager
 * The ConfigProvider \(we'll see later what is this\)
 
-**Note :** To access JDA when you can't use dependency injector, use _Krobot.jda\(\)_
+**Note :** To access JDA when you can't use dependency injector, use `Krobot.jda()`
 
 ## Going further
 
 Obviously there is a lot of thing you can do with Guice, i just showed you the basics. To see more about Guice, you can look at [its official wiki](https://github.com/google/guice/wiki "Guice official wiki")
 
 ---
+
+
 

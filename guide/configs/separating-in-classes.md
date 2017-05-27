@@ -47,13 +47,23 @@ public class MyBot implements IBot
     @Override
     public void init()
     {
-        commands.group().prefix("!").apply(this::commands);
+        commands.group().prefix("!").middlewares(TestMiddleware.class).apply(this::commands);
     }
 
     private void commands()
     {
         commands.make("!test", TestCommand.class).register();
         commands.make("!hello [name]", HelloCommand.class).register();    
+    }
+}
+
+public class TestMiddleware implements Middleware
+{
+    private static final Logger LOGGER = LogManager.getLogger("TestMiddleware");
+
+    public void handle(@NotNull Command command, @NotNull CommandContext context, @Nullable Map<String, SuppliedArgument> args) throws Exception
+    {
+        LOGGER.info("Command call ({}) handled !", command.toString());
     }
 }
 
@@ -80,6 +90,10 @@ public class HelloCommand implements CommandHandler
     }
 }
 ```
+
+
+
+**Important note : **You should see that we changed `middleware` to `middlewares` . The first one is when providing lambda or Middleware class instance, and the other one is for lambdas. That's because of a Java lambda type interop bug with varargs.
 
 ## Configs
 
