@@ -55,5 +55,7 @@ Krobot uses a lot of libraries, here is a simple list with their docs :
 | Gson \(2.8\) | [https://github.com/google/gson/blob/master/UserGuide.md](https://github.com/google/gson/blob/master/UserGuide.md) |
 | Apache Commons Collections \(4.1\) | [https://commons.apache.org/proper/commons-collections/](https://commons.apache.org/proper/commons-collections/) |
 
+---
+
 
 
