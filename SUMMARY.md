@@ -18,5 +18,8 @@
 
 ## Framework
 
+* [Dependency Injection](framework/dependency-injection.md)
+* [Dialog](framework/dialog.md)
+
 ## Command engine
 
