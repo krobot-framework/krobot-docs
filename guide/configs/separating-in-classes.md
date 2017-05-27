@@ -21,14 +21,14 @@ public class MyBot implements IBot
             commands.make("!test", (context, args) -> {
                 context.sendMessage("Test !");
             }).register();
-            
+
             commands.make("!hello [name]", (context, args) -> {
                 String name = "World";
-                
+
                 if (args.containsKey("name")) {
                     name = args.get("name").getAsString();
                 }
-                
+
                 context.sendMessage("Hello {} !", name);
             }).register();
         });
@@ -49,7 +49,7 @@ public class MyBot implements IBot
     {
         commands.group().prefix("!").apply(this::commands);
     }
-    
+
     private void commands()
     {
         commands.make("!test", TestCommand.class).register();
@@ -70,16 +70,59 @@ public class HelloCommand implements CommandHandler
     public void handle(@NotNull CommandContext context, @NotNull Map<String, SuppliedArgument> args) throws Exception
     {
         String name = "World";
-        
+
         if (args.containsKey("name"))
         {
             name = args.get("name").getAsString();
         }
-        
+
         context.sendMessage("Hello {} !", name);
     }
 }
 ```
+
+## Configs
+
+The Dependency Injection make configurations very easy to use outside of the bot. You can by example use it in your command :
+
+```java
+public class HelloCommand implements CommandHandler
+{
+    @Inject
+    private ConfigProvider config;
+
+    public void handle(@NotNull CommandContext context, @NotNull Map<String, SuppliedArgument> args) throws Exception
+    {
+        String name = config.at("hello.defaultName");
+
+        if (args.containsKey("name"))
+        {
+            name = args.get("name").getAsString();
+        }
+
+        context.sendMessage("{} {} !", config.at("hello.helloPhrase"), name);
+    }
+}
+```
+
+## Logging
+
+You need to create a Logger in EVERY CLASS you want to use Logging, a logger should ALWAYS be private. Example :
+
+```java
+public class TestCommand implements CommandHandler
+{
+    private static final Logger LOGGER = LogManager.getLogger("TestCommand");
+
+    public void handle(@NotNull CommandContext context, @NotNull Map<String, SuppliedArgument> args) throws Exception
+    {
+        LOGGER.info("Test command handled");
+        context.sendMessage("Test !");
+    }
+}
+```
+
+---
 
 
 
