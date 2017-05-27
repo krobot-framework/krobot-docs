@@ -109,5 +109,5 @@ context.sendMessage("{} {}",
 
 As you see, the String given to sendMessage goes automatically through _String\#format._ So, this should work, you can launch and then test !
 
---&gt;
+---
 

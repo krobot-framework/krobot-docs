@@ -36,5 +36,7 @@ Obviously, replace "Your bot token" with the bot token you had before.
 
 You can now launch your bot, you should see a lot of logs, and your "I am initializing" in the middle of them.
 
---&gt;
+---
+
+
 

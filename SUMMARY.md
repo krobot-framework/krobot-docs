@@ -13,6 +13,7 @@
 * [5. Logging](guide/logging.md)
 * [6. Advanced commands](guide/advanced-commands.md)
 * [7. Configs](guide/configs.md)
+* [8. Separating in classes](guide/configs/separating-in-classes.md)
 
 ## Framework
 

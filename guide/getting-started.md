@@ -36,5 +36,7 @@ Click on "New app", then enter a name, put an icon, and add a description. You d
 
 The bot token is the key to your app, so don't publish it anyway !
 
---&gt;
+---
+
+
 

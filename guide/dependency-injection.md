@@ -72,5 +72,5 @@ Here is the singletons that Krobot configured, that you can use in your class ma
 
 Obviously there is a lot of thing you can do with Guice, i just showed you the basics. To see more about Guice, you can look at [its official wiki](https://github.com/google/guice/wiki "Guice official wiki")
 
---&gt;
+---
 

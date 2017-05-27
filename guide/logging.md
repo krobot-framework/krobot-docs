@@ -49,5 +49,5 @@ Prints :
 
 Log functions can take a lot of parameters, like throwable by example, and it support formatting. Log4J is a very complete logging engine, so you can look at [the official documentation](https://logging.apache.org/log4j/2.x/manual/api.html) if you want to go further !
 
---&gt;
+---
 
