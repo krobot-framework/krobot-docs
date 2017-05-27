@@ -18,7 +18,7 @@ You can start from [the main guide](/guide/getting-started.md "Guide beggining")
 
 ### Preview
 
-Here is a simple preview. Note that the "test &lt;message&gt;" is parsed to be used then to get the args.
+Here is a simple preview. Note that the "test &lt;message&gt;" is parsed to be used then to get the args. You should note that this code can be obviously separated into classes \(like the Middleware does\), but everywhere you can put a command, you can put a lambda.
 
 ```java
 @Inject
@@ -37,5 +37,5 @@ commands.group().prefix(config.at("app.command.prefix")).apply(() -> {
 });
 ```
 
---&gt;
+̣
 
