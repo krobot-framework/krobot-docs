@@ -19,5 +19,7 @@ Krobot defines singletons to use then with dependency injection :
 * ConfigProvider
 * ExceptionHandler
 
+---
+
 
 

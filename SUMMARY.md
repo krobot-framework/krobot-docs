@@ -20,6 +20,7 @@
 
 * [Dependency Injection](framework/dependency-injection.md)
 * [Dialog](framework/dialog.md)
+* [Markdown](framework/markdown.md)
 
 ## Command engine
 
