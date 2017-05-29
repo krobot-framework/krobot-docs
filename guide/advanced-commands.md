@@ -4,7 +4,7 @@ Let's talk about command a bit deeper.
 
 ## Groups
 
-You can make a "group" of command : it is an anonymous where you register commands, and these commands will have common attributes. By example, you can define a prefix, that will apply to the commands inside the group :
+You can make a "group" of command : it is an anonymous function where you register commands, and these commands will have common attributes. By example, you can define a prefix, that will apply to the commands inside the group :
 
 ```java
 commands.group().prefix("!").apply(() -> {
