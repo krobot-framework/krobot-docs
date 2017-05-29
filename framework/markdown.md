@@ -18,11 +18,11 @@ Markdown.code("public static void main(String[] args)\n{\n}\n", /* optional */ "
 
 =&gt;
 
-    ```java
+```java
     public static void main(String[] args)
     {
     }
-    ```
+```
 
 =&gt;
 
@@ -31,6 +31,8 @@ public static void main(String[] args)
 {
 }
 ```
+
+---
 
 
 

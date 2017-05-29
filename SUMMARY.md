@@ -18,11 +18,12 @@
 
 ## Framework
 
-* [Dependency Injection](framework/dependency-injection.md)
+* [Dependency injection](framework/dependency-injection.md)
 * [Dialog](framework/dialog.md)
 * [Markdown](framework/markdown.md)
 * [Message utils](framework/message-utils.md)
 * [User utils](framework/user-utils.md)
+* [Exception handler](framework/exception-handler.md)
 
 ## Command engine
 
