@@ -22,6 +22,7 @@
 * [Dialog](framework/dialog.md)
 * [Markdown](framework/markdown.md)
 * [Message utils](framework/message-utils.md)
+* [User utils](framework/user-utils.md)
 
 ## Command engine
 
